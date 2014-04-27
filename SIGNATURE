@@ -1,0 +1,55 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.73.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 55ac697642a18dd7d974736a3d06fd531aa82382 .travis.yml
+SHA1 febfbac3710b87086e43bf85a05614ca23c436bc Changes
+SHA1 2b0b5bc8d2af40a3e92c0c707ca81d3f021b8a90 INSTALL
+SHA1 7d85e6c9005a80a1e80886e6b06ec13f0336d428 LICENSE
+SHA1 3b278b150958c9cd022f02b1503ae9462732f35f MANIFEST
+SHA1 f01df5ce26946ee4fa3f8f8e749666fc957533ed META.json
+SHA1 7a319f954f23cf2277ca3ee1c840f42c35d339b2 META.yml
+SHA1 318558f4f2ffc33aa52ba66e4f036d638b2eeba8 Makefile.PL
+SHA1 67027e190f6cf7680c3f492b3dcd17a4ecc2bfcf README
+SHA1 64bae7de3c772959cbafefe9206295dc03a0a341 cpanfile
+SHA1 5ef5849286d41eaed38744c1c476217d4df78f4e dist.ini
+SHA1 c80fe9fd2cc9a869125a473d269b6da346071591 lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm
+SHA1 b3f8b90b63af34ee8c25a48c1ffd2abe85131ad5 lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm
+SHA1 7923a01e3aa59681a2721a48f4633c8f016e2b07 lib/Dist/Zilla/Role/GitStore/Consumer.pm
+SHA1 ddcbc552db6a74fb1108edc6f1d3f9fc3a0b487e lib/Dist/Zilla/Stash/Store/Git.pm
+SHA1 c522c3928158e64bd97d34d20cbfe0b5305a7eb2 t/00-check-deps.t
+SHA1 d87ac90f83a1a7fef05519648f88297700fb3467 t/00-compile.t
+SHA1 28ecbcc0542b1d3e7cdc0b78b68a4752af1ede42 t/000-report-versions-tiny.t
+SHA1 06222253b00a378dc01f71e52b81452c22a97ad3 t/basic.t
+SHA1 64ee4ff0de2a1e8f83bcd03815a3f14963fce109 xt/author/pod-spell.t
+SHA1 a7948d34cfaad400286ea5d5fa6206c4c7e2552c xt/release/consistent-version.t
+SHA1 b3915eaac65e18e6a048b34a4b873beccab326b4 xt/release/eol.t
+SHA1 8601385c3e99501697dde1008195741b3bfb5064 xt/release/has-version.t
+SHA1 bffcb345150925893fd03a3ab8da4482fc7e88ac xt/release/minimum-version.t
+SHA1 34095a593dac2c41c8dbbe0a9b8d97452cac124c xt/release/no-smart-comments.t
+SHA1 d11cdb2db9e5d8570bc85eab6a1a4750cce7ce1e xt/release/no-tabs.t
+SHA1 f61aa261077c12716bca5fdf82ba4f141cd2fb23 xt/release/pod-linkcheck.t
+SHA1 dc614cb8db394377d7a3a7b982be4502824a43cf xt/release/pod-syntax.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJTXX3sAAoJEOd5N1CvIgQkAzUIAMjdBg+a8cQrzk6z8MWoSuCP
+Dcn/Ol6C8HToDwoTyouLCntQ4W1GJg4NhGXqT4e4kfYLTGEGaNkAvU/THXxKLsPh
+ui4XFmTMQdDybkJsE1JuhgQjSvYCYmxgy3Yk+KyeQXV48EUkioIImGD3aCDtAUNt
+qXE1eDHc4i4VrWN2rhdYO3P+PqsP7AE2ykOjh6SFAkxD5Qb6pvm98bhBRSVnb8NC
+feDzWcvJ85A5Ty/3x+oSBlhlNxJt9SPS4Wg/IGaR5Hmx9hld8w8rPn1jDMOIuwRD
+j7f/KFvKNYkFzxmai9ph4/JYsm8SoXRpbhdzQmexl7iQn4HhIKIa2U/qSRsF7lg=
+=/x0I
+-----END PGP SIGNATURE-----
