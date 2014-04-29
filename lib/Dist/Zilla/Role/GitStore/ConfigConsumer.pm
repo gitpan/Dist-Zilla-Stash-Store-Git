@@ -11,7 +11,7 @@ package Dist::Zilla::Role::GitStore::ConfigConsumer;
 BEGIN {
   $Dist::Zilla::Role::GitStore::ConfigConsumer::AUTHORITY = 'cpan:RSRCHBOY';
 }
-$Dist::Zilla::Role::GitStore::ConfigConsumer::VERSION = '0.000001'; # TRIAL
+$Dist::Zilla::Role::GitStore::ConfigConsumer::VERSION = '0.000002'; # TRIAL
 # ABSTRACT: Something that uses config info from %Store::Git
 
 use Moose::Role;
@@ -19,6 +19,7 @@ use namespace::autoclean;
 use MooseX::AttributeShortcuts;
 
 with 'Dist::Zilla::Role::GitStore::Consumer';
+
 
 requires 'gitstore_config_required';
 
@@ -32,17 +33,30 @@ __END__
 
 =for :stopwords Chris Weyl
 
+=for :stopwords Wishlist flattr flattr'ed gittip gittip'ed
+
 =head1 NAME
 
 Dist::Zilla::Role::GitStore::ConfigConsumer - Something that uses config info from %Store::Git
 
 =head1 VERSION
 
-This document describes version 0.000001 of Dist::Zilla::Role::GitStore::ConfigConsumer - released April 27, 2014 as part of Dist-Zilla-Stash-Store-Git.
+This document describes version 0.000002 of Dist::Zilla::Role::GitStore::ConfigConsumer - released April 29, 2014 as part of Dist-Zilla-Stash-Store-Git.
 
 =head1 SYNOPSIS
 
 =head1 DESCRIPTION
+
+This role should be consumed by something (typically a plugin) that consumes configuration
+information provided by L<%Store::Git|Dist::Zilla::Stash::Store::Git>.
+
+=head1 REQUIRED METHODS
+
+=head2 gitstore_config_required
+
+Should return an array of the keys we expect the L<%Store::Git
+stash|Dist::Zilla::Stash::Store::Git> to be able to provide us with values
+for.
 
 =head1 SEE ALSO
 
@@ -73,6 +87,17 @@ feature.
 =head1 AUTHOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
+
+=head2 SAYING THANKS IN A MATERIALISTIC WAY
+
+Please note B<I do not expect to be gittip'ed or flattr'ed for this work>,
+rather B<it is simply a very pleasant surprise>. I largely create and release
+works like this because I need them or I find it enjoyable; however, don't let
+that stop you giving me money if you feel like it ;)
+
+L<flattr this!|https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fdist-zilla-stash-store-git&title=RsrchBoy's%20CPAN%20Dist-Zilla-Stash-Store-Git&tags=%22RsrchBoy's%20Dist-Zilla-Stash-Store-Git%20in%20the%20CPAN%22>
+L<gittip me!|https://www.gittip.com/RsrchBoy/>
+L<Amazon Wishlist|http://www.amazon.com/gp/registry/wishlist/3G2DQFPBA57L6>
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -4,7 +4,7 @@
       "Chris Weyl <cweyl@alumni.drew.edu>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.140640",
+   "generated_by" : "Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.141170",
    "license" : [
       "lgpl_2_1"
    ],
@@ -64,19 +64,19 @@
    "provides" : {
       "Dist::Zilla::Role::GitStore::ConfigConsumer" : {
          "file" : "lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm",
-         "version" : "0.000001"
+         "version" : "0.000002"
       },
       "Dist::Zilla::Role::GitStore::ConfigProvider" : {
          "file" : "lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm",
-         "version" : "0.000001"
+         "version" : "0.000002"
       },
       "Dist::Zilla::Role::GitStore::Consumer" : {
          "file" : "lib/Dist/Zilla/Role/GitStore/Consumer.pm",
-         "version" : "0.000001"
+         "version" : "0.000002"
       },
       "Dist::Zilla::Stash::Store::Git" : {
          "file" : "lib/Dist/Zilla/Stash/Store/Git.pm",
-         "version" : "0.000001"
+         "version" : "0.000002"
       }
    },
    "release_status" : "testing",
@@ -91,7 +91,7 @@
          "web" : "https://github.com/RsrchBoy/dist-zilla-stash-store-git"
       }
    },
-   "version" : "0.000001",
+   "version" : "0.000002",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.018002"
@@ -395,7 +395,7 @@
          {
             "class" : "Dist::Zilla::Plugin::CheckPrereqsIndexed",
             "name" : "@RSRCHBOY/CheckPrereqsIndexed",
-            "version" : "0.010"
+            "version" : "0.012"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Remote::Update",
@@ -501,7 +501,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : "1",
-                  "tag" : "0.000001",
+                  "tag" : "0.000002",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -676,17 +676,17 @@
                      {
                         "class" : "Pod::Weaver::Section::RSRCHBOY::RoleParameters",
                         "name" : "ROLE PARAMETERS",
-                        "version" : "0.047"
+                        "version" : "0.048"
                      },
                      {
                         "class" : "Pod::Weaver::Section::RSRCHBOY::RequiredAttributes",
                         "name" : "REQUIRED ATTRIBUTES",
-                        "version" : "0.047"
+                        "version" : "0.048"
                      },
                      {
                         "class" : "Pod::Weaver::Section::RSRCHBOY::LazyAttributes",
                         "name" : "LAZY ATTRIBUTES",
-                        "version" : "0.047"
+                        "version" : "0.048"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Collect",
@@ -744,9 +744,9 @@
                         "version" : "4.006"
                      },
                      {
-                        "class" : "Pod::Weaver::Section::Authors",
-                        "name" : "@RSRCHBOY/Authors",
-                        "version" : "4.006"
+                        "class" : "Pod::Weaver::Section::RSRCHBOY::Authors",
+                        "name" : "RSRCHBOY::Authors",
+                        "version" : "0.048"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Contributors",

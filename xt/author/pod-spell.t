@@ -30,9 +30,9 @@ Dist
 Zilla
 Role
 GitStore
-Consumer
 ConfigProvider
-ConfigConsumer
 Stash
 Store
 Git
+Consumer
+ConfigConsumer

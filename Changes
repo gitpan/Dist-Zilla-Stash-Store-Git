@@ -1,4 +1,11 @@
 Revision history for Dist-Zilla-Stash-Store-Git
 
+0.000002-TRIAL  2014-04-29 16:18:56 PDT-0700
+	* Add some actual documentation!
+	* rename static_config -> store_config
+	* finalize(!) _build_config()
+	* add the plugin_config attribute
+	* ...and promptly rename to 'dynamic_config'
+
 0.000001-TRIAL  2014-04-27 15:00:07 PDT-0700
 	* initial release
