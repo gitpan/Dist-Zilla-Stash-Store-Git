@@ -7,6 +7,7 @@ build_requires:
   IO::Handle: '0'
   IPC::Open3: '0'
   Test::CheckDeps: '0.010'
+  Test::Moose::More: '0'
   Test::More: '0.94'
   perl: '5.006'
   strict: '0'
@@ -27,24 +28,27 @@ no_index:
 provides:
   Dist::Zilla::Role::GitStore::ConfigConsumer:
     file: lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm
-    version: '0.000003'
+    version: '0.000004'
   Dist::Zilla::Role::GitStore::ConfigProvider:
     file: lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm
-    version: '0.000003'
+    version: '0.000004'
   Dist::Zilla::Role::GitStore::Consumer:
     file: lib/Dist/Zilla/Role/GitStore/Consumer.pm
-    version: '0.000003'
+    version: '0.000004'
   Dist::Zilla::Stash::Store::Git:
     file: lib/Dist/Zilla/Stash/Store/Git.pm
-    version: '0.000003'
+    version: '0.000004'
+recommends:
+  Git::Raw: '0.35'
 requires:
-  Dist::Zilla::Role::RegisterStash: '0'
+  Dist::Zilla::Role::RegisterStash: '0.003'
   Dist::Zilla::Role::Store: '0'
-  Git::Wrapper: '0'
+  Git::Wrapper: '0.032'
   Hash::Merge::Simple: '0'
   Moose: '0'
   Moose::Role: '0'
   MooseX::AttributeShortcuts: '0'
+  MooseX::RelatedClasses: '0'
   Version::Next: '0'
   aliased: '0'
   autobox::Core: '0'
@@ -55,11 +59,27 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-stash-store-git/issues
   homepage: https://github.com/RsrchBoy/dist-zilla-stash-store-git
   repository: https://github.com/RsrchBoy/dist-zilla-stash-store-git.git
-version: '0.000003'
+version: '0.000004'
 x_Dist_Zilla:
   perl:
     version: '5.018002'
   plugins:
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: recommends
+      name: RuntimeRecommends
+      version: '5.016'
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: requires
+      name: RuntimeRequires
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@RSRCHBOY/NextRelease'
@@ -365,7 +385,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '1'
-          tag: '0.000003'
+          tag: '0.000004'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
@@ -616,6 +636,6 @@ x_Dist_Zilla:
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
-      is_trial: '1'
+      is_trial: '0'
     version: '5.016'
 x_authority: cpan:RSRCHBOY

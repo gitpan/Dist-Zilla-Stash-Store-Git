@@ -48,18 +48,21 @@ sub pmver {
     return sprintf('%-45s => %-10s%-15s%s', $module, $pmver, $wanted, "\n");
 }
 
-eval { $v .= pmver('Dist::Zilla::Role::RegisterStash','any version') };
+eval { $v .= pmver('Dist::Zilla::Role::RegisterStash','0.003') };
 eval { $v .= pmver('Dist::Zilla::Role::Store','any version') };
 eval { $v .= pmver('ExtUtils::MakeMaker','6.30') };
 eval { $v .= pmver('File::Spec','any version') };
-eval { $v .= pmver('Git::Wrapper','any version') };
+eval { $v .= pmver('Git::Raw','0.35') };
+eval { $v .= pmver('Git::Wrapper','0.032') };
 eval { $v .= pmver('Hash::Merge::Simple','any version') };
 eval { $v .= pmver('IO::Handle','any version') };
 eval { $v .= pmver('IPC::Open3','any version') };
 eval { $v .= pmver('Moose','any version') };
 eval { $v .= pmver('Moose::Role','any version') };
 eval { $v .= pmver('MooseX::AttributeShortcuts','any version') };
+eval { $v .= pmver('MooseX::RelatedClasses','any version') };
 eval { $v .= pmver('Test::CheckDeps','0.010') };
+eval { $v .= pmver('Test::Moose::More','any version') };
 eval { $v .= pmver('Test::More','0.94') };
 eval { $v .= pmver('Version::Next','any version') };
 eval { $v .= pmver('aliased','any version') };

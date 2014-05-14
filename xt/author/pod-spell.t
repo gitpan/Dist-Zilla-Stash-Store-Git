@@ -28,11 +28,11 @@ cweyl
 lib
 Dist
 Zilla
-Role
-GitStore
-ConfigProvider
-Consumer
 Stash
 Store
 Git
+Role
+GitStore
 ConfigConsumer
+ConfigProvider
+Consumer

@@ -11,32 +11,24 @@ package Dist::Zilla::Role::GitStore::Consumer;
 BEGIN {
   $Dist::Zilla::Role::GitStore::Consumer::AUTHORITY = 'cpan:RSRCHBOY';
 }
-$Dist::Zilla::Role::GitStore::Consumer::VERSION = '0.000003'; # TRIAL
+$Dist::Zilla::Role::GitStore::Consumer::VERSION = '0.000004';
 # ABSTRACT: Something that makes use of %Store::Git
 
 use Moose::Role;
 use namespace::autoclean;
 use MooseX::AttributeShortcuts;
 
-use aliased 'Dist::Zilla::Stash::Store::Git' => 'StoreGit';
+use aliased 'Dist::Zilla::Stash::Store::Git' => 'GitStore';
 
-with 'Dist::Zilla::Role::RegisterStash';
+with 'Dist::Zilla::Role::RegisterStash' => {
+    -version => '0.003',
+};
 
 
 has _git_store => (
     is              => 'lazy',
-    isa_instance_of => 'Dist::Zilla::Stash::Store::Git',
-    builder         => sub {
-        my $self = shift @_;
-
-        my $store = $self->zilla->stash_named('%Store::Git');
-        return $store
-            if $store;
-
-        $store = StoreGit->new();
-        $self->_register_stash('%Store::Git' => $store);
-        return $store;
-    },
+    isa_instance_of => GitStore,
+    builder         => sub { shift->_retrieve_or_register('%Store::Git') },
 );
 
 !!42;
@@ -57,7 +49,7 @@ Dist::Zilla::Role::GitStore::Consumer - Something that makes use of %Store::Git
 
 =head1 VERSION
 
-This document describes version 0.000003 of Dist::Zilla::Role::GitStore::Consumer - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
+This document describes version 0.000004 of Dist::Zilla::Role::GitStore::Consumer - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
 
 =head1 SYNOPSIS
 
@@ -73,7 +65,13 @@ L<%Store::Git stash|Dist::Zilla::Stash::Store::Git>.
 
 Note that this role does not indicate that B<configuration information> is
 being consumed; simply that the consumer uses the store in some way (e.g.
-looking up all tags, querying the repository log, etc).
+looking up all tags, querying the repository log, etc.).
+
+=head2 Private Methods?
+
+Note that the methods this role provides are all private, as we expect only
+the consumer of this role to use them.  (That is, these methods are not
+anticipated to be part of the public interface of any consuming plugin/etc.)
 
 =head1 ATTRIBUTES
 
@@ -84,9 +82,9 @@ L<%Store::Git|Dist::Zilla::Stash::Store::Git>.
 
 =head1 METHODS
 
-=head2 _git_store
+=head2 _git_store()
 
-A read only accessor to the _git_store attribute.
+A read only accessor to the L</_git_store> attribute.
 
 =head1 SEE ALSO
 

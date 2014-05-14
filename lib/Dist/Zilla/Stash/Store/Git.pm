@@ -11,14 +11,15 @@ package Dist::Zilla::Stash::Store::Git;
 BEGIN {
   $Dist::Zilla::Stash::Store::Git::AUTHORITY = 'cpan:RSRCHBOY';
 }
-# git description: 0.000002-1-g041a01d
-$Dist::Zilla::Stash::Store::Git::VERSION = '0.000003'; # TRIAL
+# git description: 0.000003-8-g955c602
+$Dist::Zilla::Stash::Store::Git::VERSION = '0.000004';
 
 # ABSTRACT: A common place to store and interface with git
 
 use Moose;
 use namespace::autoclean;
 use MooseX::AttributeShortcuts;
+use MooseX::RelatedClasses;
 
 use autobox::Core;
 use version;
@@ -29,11 +30,6 @@ use Hash::Merge::Simple 'merge';
 
 with 'Dist::Zilla::Role::Store';
 
-# TODO Additonal plugin roles:
-#
-# Dist::Zilla::Role::GitStore::ConfigProvider
-# Dist::Zilla::Role::GitStore::ConfigConsumer
-# Dist::Zilla::Role::GitStore::Consumer
 
 around stash_from_config => sub {
     my ($orig, $class) = (shift, shift);
@@ -87,7 +83,7 @@ has config => (
     traits  => [ 'Hash' ],
     is      => 'lazy',
     isa     => 'HashRef',
-    clearer => -1,
+    clearer => -1, # private
 
     handles => {
         has_config     => 'count',
@@ -117,11 +113,22 @@ has config => (
     },
 );
 
-# XXX ?
-has _repo => (
+
+related_class 'Git::Wrapper';
+
+has repo_wrapper => (
     is              => 'lazy',
     isa_instance_of => 'Git::Wrapper',
-    builder         => sub { Git::Wrapper->new(shift->repo_root) },
+    builder         => sub { $_[0]->git__wrapper_class->new($_[0]->repo_root) },
+);
+
+
+related_class 'Git::Raw::Repository';
+
+has repo_raw => (
+    is              => 'lazy',
+    isa_instance_of => 'Git::Raw::Repository',
+    builder         => sub { $_[0]->git__raw__repository_class->open($_[0]->repo_root) },
 );
 
 
@@ -132,7 +139,7 @@ has tags => (
     is      => 'lazy',
     isa     => 'ArrayRef[Str]',
     # For win32, natch
-    builder => sub { local $/ = "\n"; [ shift->_repo->tag ] },
+    builder => sub { local $/ = "\n"; [ shift->repo_wrapper->tag ] },
 );
 
 
@@ -197,7 +204,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Chris Weyl versioning
+=for :stopwords Chris Weyl versioning ATCHUNG
 
 =for :stopwords Wishlist flattr flattr'ed gittip gittip'ed
 
@@ -207,7 +214,7 @@ Dist::Zilla::Stash::Store::Git - A common place to store and interface with git
 
 =head1 VERSION
 
-This document describes version 0.000003 of Dist::Zilla::Stash::Store::Git - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
+This document describes version 0.000004 of Dist::Zilla::Stash::Store::Git - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
 
 =head1 SYNOPSIS
 
@@ -248,6 +255,15 @@ L</default_config>, each time giving the hash being merged precedence.
 If you're looking for "The Right Place to Find Configuration Values", this is
 it. :)
 
+=head2 repo_wrapper
+
+Contains a lazily-constructed L<Git::Wrapper> instance for our repository.
+
+=head2 repo_raw
+
+Contains a lazily-constructed L<Git::Raw::Repository> instance for our
+repository.
+
 =head2 repo_root
 
 Stores the repository root; by default this is the current directory.
@@ -263,6 +279,12 @@ from the repository tags filtered through the regular expression given in the
 C<version.regexp>.
 
 =head1 METHODS
+
+=head2 stash_from_config()
+
+This method wraps L<Dist::Zilla::Role::Stash/stash_from_config> to capture our
+L<Dist::Zilla> instance and funnel all our stash configuration options into
+the L</store_config> attribute.
 
 =head2 default_config
 
@@ -316,7 +338,7 @@ True if static configuration has been provided for a given key, e.g.
 
 This is a read-only accessor to the L</store_config> attribute.
 
-=head2 config
+=head2 config()
 
 A read-only accessor returning the config HashRef.
 
@@ -347,17 +369,25 @@ configuration information for that key.
 
 This is a read-only accessor to the L</config> attribute.
 
+=head2 repo_wrapper()
+
+This is a read-only accessor to the L</repo_wrapper> attribute.
+
+=head2 repo_raw()
+
+This is a read-only accessor to the L</repo_raw> attribute.
+
 =head2 repo_root
 
 Returns the path to the repository root; this may be a relative path.
 
 This is a read-only accessor to the L</repo_root> attribute.
 
-=head2 tags
+=head2 tags()
 
 A read-only accessor to the L</tags> attribute.
 
-=head2 previous_versions
+=head2 previous_versions()
 
 A read-only accessor to the L</previous_versions> attribute.
 
@@ -380,6 +410,17 @@ Returns the latest version known; C<undef> if no such version exists.
 
 This is a read-only accessor to the L</previous_versions> attribute.
 
+=head1 ATCHUNG!
+
+B<This is VERY EARLY CODE UNDER ACTIVE DEVELOPMENT!  It's being used by L<this
+author's plugin bundle|Dist::Zilla::PluginBundle::RSRCHBOY>, and as such is
+being released as a non-TRIAL / non-development (e.g. x.xxx_01) release to
+make that easier.  The interface is likely to change.  Stability (as it is)
+should be expected when this section is removed and the version >= 0.001 (aka
+0.001000).
+
+Contributions, issues and the like are welcome and encouraged.
+
 =head1 SEE ALSO
 
 Please see those modules/websites for more information related to this module.
@@ -389,6 +430,10 @@ Please see those modules/websites for more information related to this module.
 =item *
 
 L<Dist::Zilla::Role::Store|Dist::Zilla::Role::Store>
+
+=item *
+
+L<Dist::Zilla::Role::Stash|Dist::Zilla::Role::Stash>
 
 =back
 
