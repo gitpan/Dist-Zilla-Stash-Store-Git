@@ -48,6 +48,7 @@ sub pmver {
     return sprintf('%-45s => %-10s%-15s%s', $module, $pmver, $wanted, "\n");
 }
 
+eval { $v .= pmver('Dist::Zilla::Role::RegisterStash','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::Store','any version') };
 eval { $v .= pmver('ExtUtils::MakeMaker','6.30') };
 eval { $v .= pmver('File::Spec','any version') };
@@ -61,6 +62,7 @@ eval { $v .= pmver('MooseX::AttributeShortcuts','any version') };
 eval { $v .= pmver('Test::CheckDeps','0.010') };
 eval { $v .= pmver('Test::More','0.94') };
 eval { $v .= pmver('Version::Next','any version') };
+eval { $v .= pmver('aliased','any version') };
 eval { $v .= pmver('autobox::Core','any version') };
 eval { $v .= pmver('namespace::autoclean','any version') };
 eval { $v .= pmver('strict','any version') };

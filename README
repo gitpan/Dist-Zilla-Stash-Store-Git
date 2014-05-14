@@ -3,8 +3,8 @@ NAME
     with git
 
 VERSION
-    This document describes version 0.000002 of
-    Dist::Zilla::Stash::Store::Git - released April 29, 2014 as part of
+    This document describes version 0.000003 of
+    Dist::Zilla::Stash::Store::Git - released May 14, 2014 as part of
     Dist-Zilla-Stash-Store-Git.
 
 SYNOPSIS
@@ -172,19 +172,19 @@ BUGS
 AUTHOR
     Chris Weyl <cweyl@alumni.drew.edu>
 
-  SAYING THANKS IN A MATERIALISTIC WAY
+  I'm a material boy in a material world
     Please note I do not expect to be gittip'ed or flattr'ed for this work,
     rather it is simply a very pleasant surprise. I largely create and
     release works like this because I need them or I find it enjoyable;
-    however, don't let that stop you giving me money if you feel like it ;)
+    however, don't let that stop you if you feel like it ;)
 
-    flattr this!
+    Flattr this
     <https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithu
     b.com%2FRsrchBoy%2Fdist-zilla-stash-store-git&title=RsrchBoy's%20CPAN%20
     Dist-Zilla-Stash-Store-Git&tags=%22RsrchBoy's%20Dist-Zilla-Stash-Store-G
-    it%20in%20the%20CPAN%22> gittip me! <https://www.gittip.com/RsrchBoy/>
-    Amazon Wishlist
-    <http://www.amazon.com/gp/registry/wishlist/3G2DQFPBA57L6>
+    it%20in%20the%20CPAN%22>, gittip me <https://www.gittip.com/RsrchBoy/>,
+    or indulge my Amazon Wishlist <http://bit.ly/rsrchboys-wishlist>... If
+    you so desire.
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2014 by Chris Weyl.

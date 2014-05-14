@@ -31,8 +31,8 @@ Zilla
 Role
 GitStore
 ConfigProvider
+Consumer
 Stash
 Store
 Git
-Consumer
 ConfigConsumer

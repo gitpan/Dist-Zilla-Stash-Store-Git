@@ -15,41 +15,40 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 55ac697642a18dd7d974736a3d06fd531aa82382 .travis.yml
-SHA1 8a7a0b3b3d372c59332c7be4387eb9901bbaaaa1 Changes
-SHA1 2b0b5bc8d2af40a3e92c0c707ca81d3f021b8a90 INSTALL
+SHA1 2d44ea995828a31c949a60374d0c3b20990a034f Changes
 SHA1 7d85e6c9005a80a1e80886e6b06ec13f0336d428 LICENSE
-SHA1 3b278b150958c9cd022f02b1503ae9462732f35f MANIFEST
-SHA1 ee711b374695ec4f9386a7d157706435deeda37d META.json
-SHA1 3cd39d1cd1821e58095c0f2776a61963247ee506 META.yml
-SHA1 81217096088f4274c4e336f92312a0f7e8c821de Makefile.PL
-SHA1 04632e4b289421d7eb6a7f382d66ac460b2c0f8a README
-SHA1 64bae7de3c772959cbafefe9206295dc03a0a341 cpanfile
+SHA1 394f9b7d0b95868b971d5c9dbe3de52526fbd1f3 MANIFEST
+SHA1 b45e1bb26581c49fe8cc3d6d8a9167654f77b8f9 META.json
+SHA1 88215e8abe28d2c399ab7f50c1a36d54d7c7d968 META.yml
+SHA1 17944574e5ce607507c99900a1eef4965015032f Makefile.PL
+SHA1 0ffe7622caf2c7af08b9e42b8c520b403ba4064e README
+SHA1 f4efb07b607c36aa350fb72f367125eac7beca26 cpanfile
 SHA1 fa7724a8d3c6e7fd8536ffc3762a0546e7ef2588 dist.ini
-SHA1 41cf3628d165daf9ff3f73e255b6e524a769e028 lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm
-SHA1 eac352ddab1697ab30201aaa1501faf6eb57b34c lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm
-SHA1 5069e7ec536456409a4704424beb0bc461d3e21e lib/Dist/Zilla/Role/GitStore/Consumer.pm
-SHA1 09b4054d8cf0b50662d75e932fcf93fbcf08dfef lib/Dist/Zilla/Stash/Store/Git.pm
+SHA1 21d970da954ffa587062189387d1669d6c4a7ad4 lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm
+SHA1 5d4503ae4ea2f01cedeeaaf18c121f616bf1b1f7 lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm
+SHA1 3bf17becf596795bf8a39f7c8f69d4a27d4c9e79 lib/Dist/Zilla/Role/GitStore/Consumer.pm
+SHA1 e36cab7c8d597e0ed309aff06fc3ac6bd513b748 lib/Dist/Zilla/Stash/Store/Git.pm
 SHA1 c522c3928158e64bd97d34d20cbfe0b5305a7eb2 t/00-check-deps.t
 SHA1 d87ac90f83a1a7fef05519648f88297700fb3467 t/00-compile.t
-SHA1 28ecbcc0542b1d3e7cdc0b78b68a4752af1ede42 t/000-report-versions-tiny.t
+SHA1 6d01abc13f24a1e1453fdcfef351f5bcaddcec53 t/000-report-versions-tiny.t
 SHA1 06222253b00a378dc01f71e52b81452c22a97ad3 t/basic.t
-SHA1 52fc11464450d980d1f8c1d70081c8685c7fd805 xt/author/pod-spell.t
+SHA1 4ef3fbaf1602c1976c910f2aa581fdf9a04743c7 xt/author/pod-spell.t
 SHA1 a7948d34cfaad400286ea5d5fa6206c4c7e2552c xt/release/consistent-version.t
 SHA1 b3915eaac65e18e6a048b34a4b873beccab326b4 xt/release/eol.t
 SHA1 8601385c3e99501697dde1008195741b3bfb5064 xt/release/has-version.t
 SHA1 bffcb345150925893fd03a3ab8da4482fc7e88ac xt/release/minimum-version.t
 SHA1 34095a593dac2c41c8dbbe0a9b8d97452cac124c xt/release/no-smart-comments.t
-SHA1 d11cdb2db9e5d8570bc85eab6a1a4750cce7ce1e xt/release/no-tabs.t
+SHA1 fc6852bb5640c862b58014cc419744f717d733b8 xt/release/no-tabs.t
 SHA1 f61aa261077c12716bca5fdf82ba4f141cd2fb23 xt/release/pod-linkcheck.t
 SHA1 dc614cb8db394377d7a3a7b982be4502824a43cf xt/release/pod-syntax.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJTYDNlAAoJEOd5N1CvIgQkAfIIAIN8l4GTje0Lt7J0a9NjLjvL
-3lyO+qMX7fnzRQ9EzgwGLA/W19Wb6W9Bdegbm8mMUI3ErrhiMSg8o8AWjqM4gTDH
-GEOZXaoKJFWc1K/rKbZQL3YoG4tMEP2RupZgrcY2uEcSdFqWC/kLclNGb1c8OIQd
-OUleoWEj0q4wcpefrC/DiOz9ReNqzn+Ap8OsaoTB/NW1nvk77XkTz7ygeZu/wjDR
-zUwbD8JboePe7E9aV40CU5sx8dDrTfu/Q5my114/Eh6TmBod9XjQj6d30va9LywJ
-m2LiiIQosC4W7jhGWWg0dk0vnFM4agPrdrKJdrkWQyfkTIbHfJyB3votZLc7668=
-=CpUl
+iQEcBAEBAgAGBQJTcyScAAoJEOd5N1CvIgQkYa4H/R8iTYqvS9dpOyYRasX5xdgE
+m/wQ2g0FadIL8gcwJxLa1lZKFe6VI2VSD02zqoam7Rg1kMYzbWoxWDUs9HGRZU2U
+qoWRniOuNkvxaIW9emwDFrITIXpy9egZrW6ffpUtok3KCYfOjX2MwaIuhk7IJezj
+72SQTACBU/YAijjlFNSIz21nr6jyVJKgRgHI2Y9G475UdjFMnUS0f1fL6CmDN13s
+kg/kBA6C1Fh7fRTtnIBSpmCXWrOxwtNlkSrBlYrNkOdvUVnpDGD1SAyBiDyZ4aib
+jJVa60Ng5u7GYvXfbh6CGvJCRh8oX45mQBGMgcM/3O9NlRd3DsKcLt96bDEa33E=
+=XJWo
 -----END PGP SIGNATURE-----

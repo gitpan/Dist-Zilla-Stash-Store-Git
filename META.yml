@@ -14,7 +14,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.141170'
+generated_by: 'Dist::Zilla version 5.016, CPAN::Meta::Converter version 2.141170'
 license: lgpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,17 +27,18 @@ no_index:
 provides:
   Dist::Zilla::Role::GitStore::ConfigConsumer:
     file: lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm
-    version: '0.000002'
+    version: '0.000003'
   Dist::Zilla::Role::GitStore::ConfigProvider:
     file: lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm
-    version: '0.000002'
+    version: '0.000003'
   Dist::Zilla::Role::GitStore::Consumer:
     file: lib/Dist/Zilla/Role/GitStore/Consumer.pm
-    version: '0.000002'
+    version: '0.000003'
   Dist::Zilla::Stash::Store::Git:
     file: lib/Dist/Zilla/Stash/Store/Git.pm
-    version: '0.000002'
+    version: '0.000003'
 requires:
+  Dist::Zilla::Role::RegisterStash: '0'
   Dist::Zilla::Role::Store: '0'
   Git::Wrapper: '0'
   Hash::Merge::Simple: '0'
@@ -45,6 +46,7 @@ requires:
   Moose::Role: '0'
   MooseX::AttributeShortcuts: '0'
   Version::Next: '0'
+  aliased: '0'
   autobox::Core: '0'
   namespace::autoclean: '0'
   perl: '5.006'
@@ -53,7 +55,7 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-stash-store-git/issues
   homepage: https://github.com/RsrchBoy/dist-zilla-stash-store-git
   repository: https://github.com/RsrchBoy/dist-zilla-stash-store-git.git
-version: '0.000002'
+version: '0.000003'
 x_Dist_Zilla:
   perl:
     version: '5.018002'
@@ -61,7 +63,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@RSRCHBOY/NextRelease'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
       config:
@@ -101,7 +103,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@RSRCHBOY/GatherDir'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::PromptIfStale
       config:
@@ -118,7 +120,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PruneCruft
       name: '@RSRCHBOY/PruneCruft'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::Git::Describe
       name: '@RSRCHBOY/Git::Describe'
@@ -126,26 +128,22 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@RSRCHBOY/ExecDir'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::ShareDir
       name: '@RSRCHBOY/ShareDir'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::MakeMaker
       config:
         Dist::Zilla::Role::TestRunner:
           default_jobs: 1
       name: '@RSRCHBOY/MakeMaker'
-      version: '5.015'
-    -
-      class: Dist::Zilla::Plugin::InstallGuide
-      name: '@RSRCHBOY/InstallGuide'
-      version: '1.200002'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::Manifest
       name: '@RSRCHBOY/Manifest'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::SurgicalPkgVersion
       name: '@RSRCHBOY/SurgicalPkgVersion'
@@ -165,7 +163,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@RSRCHBOY/AutoPrereqs'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::Prepender
       name: '@RSRCHBOY/Prepender'
@@ -181,18 +179,17 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@RSRCHBOY/PodSyntaxTests'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::Test::NoTabs
       config:
         Dist::Zilla::Plugin::Test::NoTabs:
-          module_finder:
+          finder:
             - ':InstallModules'
-          script_finder:
             - ':ExecFiles'
             - ':TestFiles'
       name: '@RSRCHBOY/Test::NoTabs'
-      version: '0.07'
+      version: '0.08'
     -
       class: Dist::Zilla::Plugin::EOLTests
       name: '@RSRCHBOY/EOLTests'
@@ -242,19 +239,19 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@RSRCHBOY/MetaConfig'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::MetaJSON
       name: '@RSRCHBOY/MetaJSON'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@RSRCHBOY/MetaYAML'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::MetaNoIndex
       name: '@RSRCHBOY/MetaNoIndex'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::MetaProvides::Package
       config:
@@ -263,7 +260,7 @@ x_Dist_Zilla:
             -
               class: Dist::Zilla::Plugin::FinderCode
               name: '@RSRCHBOY/MetaProvides::Package/AUTOVIV/:InstallModulesPM'
-              version: '5.015'
+              version: '5.016'
         Dist::Zilla::Role::MetaProvider::Provider:
           inherit_missing: '1'
           inherit_version: '1'
@@ -273,11 +270,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::GithubMeta
       name: '@RSRCHBOY/GithubMeta'
-      version: '0.42'
+      version: '0.46'
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: '@RSRCHBOY/TestRelease'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::CheckChangesHasContent
       name: '@RSRCHBOY/CheckChangesHasContent'
@@ -368,7 +365,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '1'
-          tag: '0.000002'
+          tag: '0.000003'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
@@ -419,7 +416,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: '@RSRCHBOY/UploadToCPAN'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::Signature
       name: '@RSRCHBOY/Signature'
@@ -439,15 +436,15 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@RSRCHBOY/ConfirmRelease'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::License
       name: '@RSRCHBOY/License'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::CPANFile
       name: '@RSRCHBOY/CPANFile'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::CopyFilesFromBuild
       name: '@RSRCHBOY/CopyFilesFromBuild'
@@ -505,15 +502,15 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Section::RSRCHBOY::RoleParameters
               name: 'ROLE PARAMETERS'
-              version: '0.048'
+              version: '0.049'
             -
               class: Pod::Weaver::Section::RSRCHBOY::RequiredAttributes
               name: 'REQUIRED ATTRIBUTES'
-              version: '0.048'
+              version: '0.049'
             -
               class: Pod::Weaver::Section::RSRCHBOY::LazyAttributes
               name: 'LAZY ATTRIBUTES'
-              version: '0.048'
+              version: '0.049'
             -
               class: Pod::Weaver::Section::Collect
               name: ATTRIBUTES
@@ -561,7 +558,7 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Section::RSRCHBOY::Authors
               name: RSRCHBOY::Authors
-              version: '0.048'
+              version: '0.049'
             -
               class: Pod::Weaver::Section::Contributors
               name: '@RSRCHBOY/Contributors'
@@ -583,42 +580,42 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':IncModules'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':MainModule'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':AllFiles'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':NoFiles'
-      version: '5.015'
+      version: '5.016'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: '@RSRCHBOY/MetaProvides::Package/AUTOVIV/:InstallModulesPM'
-      version: '5.015'
+      version: '5.016'
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: '1'
-    version: '5.015'
+    version: '5.016'
 x_authority: cpan:RSRCHBOY

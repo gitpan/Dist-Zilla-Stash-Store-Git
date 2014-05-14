@@ -11,7 +11,7 @@ package Dist::Zilla::Role::GitStore::ConfigProvider;
 BEGIN {
   $Dist::Zilla::Role::GitStore::ConfigProvider::AUTHORITY = 'cpan:RSRCHBOY';
 }
-$Dist::Zilla::Role::GitStore::ConfigProvider::VERSION = '0.000002'; # TRIAL
+$Dist::Zilla::Role::GitStore::ConfigProvider::VERSION = '0.000003'; # TRIAL
 # ABSTRACT: Something that provides config info to %Store::Git
 
 use Moose::Role;
@@ -39,7 +39,7 @@ Dist::Zilla::Role::GitStore::ConfigProvider - Something that provides config inf
 
 =head1 VERSION
 
-This document describes version 0.000002 of Dist::Zilla::Role::GitStore::ConfigProvider - released April 29, 2014 as part of Dist-Zilla-Stash-Store-Git.
+This document describes version 0.000003 of Dist::Zilla::Role::GitStore::ConfigProvider - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
 
 =head1 SYNOPSIS
 
@@ -88,16 +88,24 @@ feature.
 
 Chris Weyl <cweyl@alumni.drew.edu>
 
-=head2 SAYING THANKS IN A MATERIALISTIC WAY
+=head2 I'm a material boy in a material world
+
+=begin html
+
+<a href="https://www.gittip.com/RsrchBoy/"><img src="https://raw.githubusercontent.com/gittip/www.gittip.com/master/www/assets/%25version/logo.png" /></a>
+<a href="http://bit.ly/rsrchboys-wishlist"><img src="http://wps.io/wp-content/uploads/2014/05/amazon_wishlist.resized.png" /></a>
+<a href="https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fdist-zilla-stash-store-git&title=RsrchBoy's%20CPAN%20Dist-Zilla-Stash-Store-Git&tags=%22RsrchBoy's%20Dist-Zilla-Stash-Store-Git%20in%20the%20CPAN%22"><img src="http://api.flattr.com/button/flattr-badge-large.png" /></a>
+
+=end html
 
 Please note B<I do not expect to be gittip'ed or flattr'ed for this work>,
 rather B<it is simply a very pleasant surprise>. I largely create and release
 works like this because I need them or I find it enjoyable; however, don't let
-that stop you giving me money if you feel like it ;)
+that stop you if you feel like it ;)
 
-L<flattr this!|https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fdist-zilla-stash-store-git&title=RsrchBoy's%20CPAN%20Dist-Zilla-Stash-Store-Git&tags=%22RsrchBoy's%20Dist-Zilla-Stash-Store-Git%20in%20the%20CPAN%22>
-L<gittip me!|https://www.gittip.com/RsrchBoy/>
-L<Amazon Wishlist|http://www.amazon.com/gp/registry/wishlist/3G2DQFPBA57L6>
+L<Flattr this|https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fdist-zilla-stash-store-git&title=RsrchBoy's%20CPAN%20Dist-Zilla-Stash-Store-Git&tags=%22RsrchBoy's%20Dist-Zilla-Stash-Store-Git%20in%20the%20CPAN%22>,
+L<gittip me|https://www.gittip.com/RsrchBoy/>, or indulge my
+L<Amazon Wishlist|http://bit.ly/rsrchboys-wishlist>...  If you so desire.
 
 =head1 COPYRIGHT AND LICENSE
 
