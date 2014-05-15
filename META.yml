@@ -28,16 +28,16 @@ no_index:
 provides:
   Dist::Zilla::Role::GitStore::ConfigConsumer:
     file: lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm
-    version: '0.000004'
+    version: '0.000005'
   Dist::Zilla::Role::GitStore::ConfigProvider:
     file: lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm
-    version: '0.000004'
+    version: '0.000005'
   Dist::Zilla::Role::GitStore::Consumer:
     file: lib/Dist/Zilla/Role/GitStore/Consumer.pm
-    version: '0.000004'
+    version: '0.000005'
   Dist::Zilla::Stash::Store::Git:
     file: lib/Dist/Zilla/Stash/Store/Git.pm
-    version: '0.000004'
+    version: '0.000005'
 recommends:
   Git::Raw: '0.35'
 requires:
@@ -59,7 +59,7 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-stash-store-git/issues
   homepage: https://github.com/RsrchBoy/dist-zilla-stash-store-git
   repository: https://github.com/RsrchBoy/dist-zilla-stash-store-git.git
-version: '0.000004'
+version: '0.000005'
 x_Dist_Zilla:
   perl:
     version: '5.018002'
@@ -385,7 +385,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '1'
-          tag: '0.000004'
+          tag: '0.000005'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local

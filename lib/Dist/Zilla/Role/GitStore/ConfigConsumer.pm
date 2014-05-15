@@ -11,7 +11,7 @@ package Dist::Zilla::Role::GitStore::ConfigConsumer;
 BEGIN {
   $Dist::Zilla::Role::GitStore::ConfigConsumer::AUTHORITY = 'cpan:RSRCHBOY';
 }
-$Dist::Zilla::Role::GitStore::ConfigConsumer::VERSION = '0.000004';
+$Dist::Zilla::Role::GitStore::ConfigConsumer::VERSION = '0.000005';
 # ABSTRACT: Something that uses config info from %Store::Git
 
 use Moose::Role;
@@ -41,7 +41,7 @@ Dist::Zilla::Role::GitStore::ConfigConsumer - Something that uses config info fr
 
 =head1 VERSION
 
-This document describes version 0.000004 of Dist::Zilla::Role::GitStore::ConfigConsumer - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
+This document describes version 0.000005 of Dist::Zilla::Role::GitStore::ConfigConsumer - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
 
 =head1 SYNOPSIS
 

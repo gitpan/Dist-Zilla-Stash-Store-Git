@@ -11,8 +11,8 @@ package Dist::Zilla::Stash::Store::Git;
 BEGIN {
   $Dist::Zilla::Stash::Store::Git::AUTHORITY = 'cpan:RSRCHBOY';
 }
-# git description: 0.000003-8-g955c602
-$Dist::Zilla::Stash::Store::Git::VERSION = '0.000004';
+# git description: 0.000004-1-g398e665
+$Dist::Zilla::Stash::Store::Git::VERSION = '0.000005';
 
 # ABSTRACT: A common place to store and interface with git
 
@@ -55,7 +55,17 @@ has dynamic_config => (
     traits  => [ 'Hash' ],
     is      => 'lazy',
     isa     => 'HashRef',
-    builder => sub { { } },
+    builder => sub {
+        my $self = shift @_;
+
+        my @config =
+            map { $_->gitstore_config_provided }
+            $self->_dzil->plugins_with('-GitStore::ConfigProvider')->flatten
+            ;
+
+        ### @config
+        return \@config;
+    },
     handles => {
         has_dynamic_config     => 'count',
         has_no_dynamic_config  => 'is_empty', # XXX ?
@@ -214,7 +224,7 @@ Dist::Zilla::Stash::Store::Git - A common place to store and interface with git
 
 =head1 VERSION
 
-This document describes version 0.000004 of Dist::Zilla::Stash::Store::Git - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
+This document describes version 0.000005 of Dist::Zilla::Stash::Store::Git - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
 
 =head1 SYNOPSIS
 

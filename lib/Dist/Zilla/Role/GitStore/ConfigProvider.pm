@@ -11,7 +11,7 @@ package Dist::Zilla::Role::GitStore::ConfigProvider;
 BEGIN {
   $Dist::Zilla::Role::GitStore::ConfigProvider::AUTHORITY = 'cpan:RSRCHBOY';
 }
-$Dist::Zilla::Role::GitStore::ConfigProvider::VERSION = '0.000004';
+$Dist::Zilla::Role::GitStore::ConfigProvider::VERSION = '0.000005';
 # ABSTRACT: Something that provides config info to %Store::Git
 
 use Moose::Role;
@@ -39,7 +39,7 @@ Dist::Zilla::Role::GitStore::ConfigProvider - Something that provides config inf
 
 =head1 VERSION
 
-This document describes version 0.000004 of Dist::Zilla::Role::GitStore::ConfigProvider - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
+This document describes version 0.000005 of Dist::Zilla::Role::GitStore::ConfigProvider - released May 14, 2014 as part of Dist-Zilla-Stash-Store-Git.
 
 =head1 SYNOPSIS
 

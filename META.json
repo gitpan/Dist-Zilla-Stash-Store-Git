@@ -71,19 +71,19 @@
    "provides" : {
       "Dist::Zilla::Role::GitStore::ConfigConsumer" : {
          "file" : "lib/Dist/Zilla/Role/GitStore/ConfigConsumer.pm",
-         "version" : "0.000004"
+         "version" : "0.000005"
       },
       "Dist::Zilla::Role::GitStore::ConfigProvider" : {
          "file" : "lib/Dist/Zilla/Role/GitStore/ConfigProvider.pm",
-         "version" : "0.000004"
+         "version" : "0.000005"
       },
       "Dist::Zilla::Role::GitStore::Consumer" : {
          "file" : "lib/Dist/Zilla/Role/GitStore/Consumer.pm",
-         "version" : "0.000004"
+         "version" : "0.000005"
       },
       "Dist::Zilla::Stash::Store::Git" : {
          "file" : "lib/Dist/Zilla/Stash/Store/Git.pm",
-         "version" : "0.000004"
+         "version" : "0.000005"
       }
    },
    "release_status" : "stable",
@@ -98,7 +98,7 @@
          "web" : "https://github.com/RsrchBoy/dist-zilla-stash-store-git"
       }
    },
-   "version" : "0.000004",
+   "version" : "0.000005",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.018002"
@@ -523,7 +523,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : "1",
-                  "tag" : "0.000004",
+                  "tag" : "0.000005",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
